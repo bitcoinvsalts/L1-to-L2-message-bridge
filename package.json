@@ -1,0 +1,50 @@
+{
+  "name": "L1-to-L2-message-bridge",
+  "version": "1.0.0",
+  "description": "A dApp to send messages from L1 Sepolia to Optimism Sepolia and display them",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "compile": "hardhat compile",
+    "deploy:l1": "hardhat run scripts/deployL1Sender.js --network sepolia",
+    "deploy:l2": "hardhat run scripts/deployL2Receiver.js --network optimismSepolia",
+    "test:contracts": "hardhat test"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.5.3",
+    "dotenv": "^10.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.2",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.0",
+    "hardhat": "^2.7.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
